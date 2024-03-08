@@ -9,3 +9,6 @@ I replaced one of the access layer switch from previous lab to a Distribution la
 3. Etherchannel
 Etherchannel allows multiple port to be combined into one virtual port. This increases bandwidth that otherwise would not be possible due to Spanning Tree Protocol(STP), because it will block any other port to prevent broadcast storms (loops) in the network. I configured both LACP and PAgP as methods to bundle multiple ethernet connections as 1 virtual port.
 
+4. HSRP
+First Hop Redundancy Protocol allows devices to connect to public/external network even if something goes wrong with the default gateway's connection (i.e. Interface down, etc). This is possible by configuring HSRP (Hot Standby Router Protocol - Cisco Proprietary) on Cisco's routers. It allows a group of routers to configure a Virtual IP that can be used as default gateway for end devices, and in the event of interface failure, HSRP will seamlessly transition the traffic into another healthy router within the group.
+   
